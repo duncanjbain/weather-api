@@ -1,0 +1,30 @@
+{
+  "name": "weather-api",
+  "version": "0.0.1",
+  "description": "Express based Dark Sky API wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncanjbain/weather-api.git"
+  },
+  "keywords": [
+    "dark",
+    "sky",
+    "api",
+    "wrapper",
+    "weather",
+    "express"
+  ],
+  "author": "Duncan Bain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duncanjbain/weather-api/issues"
+  },
+  "homepage": "https://github.com/duncanjbain/weather-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
