@@ -6,6 +6,8 @@ class DarkySkyApi {
     this.latitude = null;
     this.longitude = null;
     this.excludes = null;
+    this.lang = null;
+    this.units = null;
   }
 }
 
