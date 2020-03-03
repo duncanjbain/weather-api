@@ -5,6 +5,7 @@ class DarkySkyApi {
     this.apiKey = apiKey;
     this.latitude = null;
     this.longitude = null;
+    this.excludes = null;
   }
 }
 
