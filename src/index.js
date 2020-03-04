@@ -1,9 +1,6 @@
-const express = require('express');
-const helmet = require('helmet');
+const { port } = require('./config/vars');
+const app = require('./config/express');
 
-const app = express();
-
-// secure api endpoints by setting headers
-app.use(helmet());
+app.listen(port, () => console.log(`server started on port ${port}`));
 
 module.exports = app;
