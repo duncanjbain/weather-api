@@ -1,5 +1,9 @@
 const express = require('express');
+const helmet = require('helmet');
 
 const app = express();
-app.get('/', (req, res) => res.send('Hello World!'));
-app.listen(3000, () => console.log('Server ready'));
+
+// secure api endpoints by setting headers
+app.use(helmet());
+
+module.exports = app;
