@@ -1,5 +1,5 @@
 const express = require('express');
-const GetWeatherRoutes = require('./GetWeather');
+const GetWeatherRoutes = require('./DarkSkyApi');
 
 const router = express.Router();
 
