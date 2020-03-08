@@ -1,6 +1,26 @@
-const { PORT } = require('./config/vars');
-const app = require('./config/express');
+require('dotenv').config()
+const express = require('express');
+const helmet = require('helmet');
+const fetch = require('node-fetch');
 
-app.listen(PORT, () => console.log(`server started on port ${PORT}`));
+const app = express();
+app.use(helmet());
 
-module.exports = app;
+app.listen(process.env.PORT, () =>
+  console.log(`server started on port ${process.env.PORT}`)
+);
+
+app.get('/getweather/:latitude,:longitude', async (req, res) => {
+  try {
+    const { latitude, longitude } = req.params;
+    const forecast =  await fetch(`https://api.darksky.net/forecast/${process.env.DARKSKYAPIKEY}/${latitude},${longitude}`);
+    const forecastJson = await forecast.json();
+    res.json(forecastJson);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get('/', function(req, res) {
+  res.send('Hello World!');
+});
