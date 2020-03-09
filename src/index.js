@@ -2,9 +2,11 @@ require('dotenv').config()
 const express = require('express');
 const helmet = require('helmet');
 const fetch = require('node-fetch');
+const rateLimiterMiddleware = require('./middleware/rateLimiter');
 
 const app = express();
 app.use(helmet());
+app.use(rateLimiterMiddleware);
 
 app.listen(process.env.PORT, () =>
   console.log(`server started on port ${process.env.PORT}`)
