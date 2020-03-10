@@ -26,6 +26,7 @@
   "homepage": "https://github.com/duncanjbain/weather-api#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "express": "^4.17.1",
     "helmet": "^3.21.3",
     "moment": "^2.24.0",
