@@ -8,7 +8,7 @@ require('dotenv').config({
 });
 
 module.exports = {
-  env: process.env.NODE_ENV,
-  port: process.env.PORT,
-  darkSkyApiKey: process.env.DARKSKYAPIKEY,
+  NODE_ENV: process.env.NODE_ENV,
+  PORT: process.env.PORT || 9001,
+  DARKSKYAPIKEY: process.env.DARKSKYAPIKEY,
 };
